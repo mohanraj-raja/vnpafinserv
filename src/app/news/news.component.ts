@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-   private newses:object =[
-    {"title":'HDFC goes High',description:"HDFC goes to 8%"},
+   private newses:Movie[] =[
+    {title:'HDFC goes High',description:"HDFC goes to 8%"},
       {title:'HDFC goes low',description:"HDFC goes to 7%"},
         {title:'HDFC goes high',description:"HDFC goes to 6%"}
 
@@ -23,3 +23,7 @@ export class NewsComponent implements OnInit {
   }
 
 }
+class Movie {  
+    title : string;  
+   description:string; 
+}  
