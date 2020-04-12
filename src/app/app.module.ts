@@ -6,10 +6,12 @@ import {MatCardModule} from '@angular/material/card';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { NewsComponent } from './news/news.component';
+import { NewsServiceService } from './services/news-service.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, MatCardModule ],
   declarations: [ AppComponent, HelloComponent, NewsComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [NewsServiceService]
 })
 export class AppModule { }

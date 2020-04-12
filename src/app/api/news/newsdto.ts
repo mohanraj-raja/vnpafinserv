@@ -5,7 +5,7 @@
  */
 
 export interface INewsdto {
-  key: number;
   title: string;
-  dateOfPublish: Date;
+  description: string;
+  postedOn: Date;
 }
