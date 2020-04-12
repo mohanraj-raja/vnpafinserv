@@ -3,8 +3,18 @@
     <h4>Stock News Update!</h4>
   </div>
   <div *ngFor="let news of newses;">
-        <h5>{{news.title}}</h5>
-        <p>{{news.description}}</p>
-        <p>{{news.postedOn}}</p>
+        <mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{news.title}}</mat-card-title>
+    <mat-card-subtitle>Published on {{news.postedOn}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{news.description}}
+    </p>
+  </mat-card-content>
+  
+</mat-card>
   </div>
   </div>
