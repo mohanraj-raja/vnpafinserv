@@ -1,0 +1,16 @@
+mat-card-title {
+  color: red;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+mat-card-subtitle {
+  text-align: left;
+  color:darkgrey;
+  font-size: 70%;
+}
+
+.example-card{
+  border: 2px solid #003;
+  
+}
