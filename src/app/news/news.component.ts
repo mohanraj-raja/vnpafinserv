@@ -19,27 +19,23 @@ export class NewsComponent implements OnInit {
 
   ];
 
-  constructor(public http: NewsServiceService) {
+  constructor(private newsService: NewsServiceService) {
   
    }
 
   
 
   ngOnInit() {
+    this.getNews();
   }
 
     getNews() {
- 
-    this.newsArray = [];
-    this.http.getEmployees().subscribe(
-      (data: Array<IEmployeeDTO>) => {
-        // console.log('Employees', data);
-        const employeeModels = data.map((newsDTA: INewsinterface) =>
-          EmployeeModel.fromDTO(newsDTA)
-        );
-        this.employees = this.employees.concat(employeeModels);
-      }
+    this.newsArray=[];
+    this.newsService.getNews().subscribe(data=>
+    {
+    this.newsArray=data; console.log(this.newsArray);}
     );
+   
   }
 
 }

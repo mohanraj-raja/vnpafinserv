@@ -1,7 +1,7 @@
 mat-card-title {
-  text-align: left;
   color: red;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  float:left;
 }
 
 mat-card-subtitle {
@@ -11,5 +11,6 @@ mat-card-subtitle {
 }
 
 .example-card{
-  border: 2px solid #003
+  border: 2px solid #003;
+  
 }

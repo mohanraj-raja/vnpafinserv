@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
 import { Observable } from "rxjs";
-import {INewsinterface} from './newsinterface';
+import { NewsModel } from '../../model/newsModel';
 
 
 
@@ -10,16 +10,13 @@ import {INewsinterface} from './newsinterface';
 @Injectable()
 export class NewsServiceService {
 
-  constructor(public http: HttpClient) {  }
+  constructor(private http: HttpClient) {  }
 
-   getNews(): Observable<INewsinterface> {
+   getNews(): Observable<NewsModel[]> {
+     console.log("reached service");
     return this.http
-      .get("https://vnpafinservrestapi--mohanrajraja.repl.co/getNews", { params: {} })
-      .pipe(
-        map(response => {
-          return response as INewsinterface;
-        })
-      );
+      .get<NewsModel[]>('https://vnpafinservrestapi--mohanrajraja.repl.co/getNews');
+      
   }
 
 }
